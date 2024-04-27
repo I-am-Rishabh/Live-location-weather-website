@@ -41,13 +41,13 @@ searchTab.addEventListener("click",()=>{
 })
 
 function getfromSessionStorage(){
-   //localcoordinate kese operate kar raha hai study this ??
+   
     const localCoordinates= sessionStorage.getItem("user-coordinates");
     if(!localCoordinates){
         grantAccessContainer.classList.add("active");
     }
     else{
-        //this else block how is this working ??
+    
         const coordinates=JSON.parse(localCoordinates);
         fetchUserWeatherInfo(coordinates);
     }
@@ -55,7 +55,7 @@ function getfromSessionStorage(){
 
 
 async function fetchUserWeatherInfo(coordinates){
-// how can two variable can hold ones values
+
     const {lat,lon}=coordinates;
     grantAccessContainer.classList.remove("active");
     loadingScreen.classList.add("active");
@@ -98,7 +98,7 @@ function renderWeatherInfo(weatherInfo){
     humidity.innerText = `${weatherInfo?.main?.humidity}%`;
     cloudiness.innerText = `${weatherInfo?.clouds?.all}%`;
 }
-//get knowledge of this callback function
+
 function getLocation(){
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -107,7 +107,6 @@ function getLocation(){
         alert("no geolocation support");
     }
 }
-//get knowledge of this 
 function showPosition(position){
     const userCoordinates ={
         lat:position.coords.latitude,

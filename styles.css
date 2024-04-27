@@ -47,17 +47,13 @@
     background-color: rgba(219,226,239,0.5);
     border-radius:4px;
  }
-/*remove this below container  except margin inblock */
  .weather-container{
-   /* display:flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction:column;*/
+ 
     margin-block: 4rem;
  }
 
  .btn{ 
- appearance:none;/*all:unset; is same */
+ appearance:none;
  font-size:0.85rem;
  border:none;
  color:white;
@@ -80,7 +76,7 @@
     flex-direction:column;
     align-items:center;
  }
- .grant-location-container{/*why this is present*/
+ .grant-location-container{
     display:none;
 
  }
